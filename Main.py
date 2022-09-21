@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os, shutil
 from os.path import isfile, join
 from os import path
@@ -19,11 +20,11 @@ try:
         #PC files
         SourceFiles = [f for f in os.listdir(source_dir) if isfile(join(source_dir, f))]
 
-        print(DestFiles)
-        print(SourceFiles)
+        print("Source >>" , len(DestFiles),DestFiles)
+        print("Dest >>" ,len(SourceFiles),SourceFiles)
 
         for position, file in enumerate(SourceFiles):
-            print(path.exists(file))
+            # print(path.exists(file)) #checking if file is there or not
             if path.exists(file):
                 file_sr = SourceFiles[position]
                 shutil.copy(file_sr, dest_dir) 
