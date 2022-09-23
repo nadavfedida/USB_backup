@@ -13,7 +13,7 @@ try:
         os.chdir(source_dir)
         # f=open('testingFile1.txt','w+')
         # f.write('this is a test doc 1')
-        
+         
         #USB files
         DestFiles = [f for f in os.listdir(dest_dir) if isfile(join(dest_dir, f))]
 
@@ -35,3 +35,4 @@ except Exception as E:
     print(E)
 
 
+#hello joe
